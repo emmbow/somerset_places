@@ -1,0 +1,16 @@
+<h1><%= @town.name %></h1>
+
+<% if @town_detail[2].join == "" %>
+  <p>No wikipedia results for this town.</p>
+  <a href=<%= @town_detail[3].join %>>Try this instead</a>
+<% elsif @town_detail[2].join.include? ("may refer to:") %>
+  <p>No wikipedia page for this town.</p>
+<% else %>
+  <h1><%= @town_detail[2].join %></h1>
+  <a href=<%= @town_detail[3].join %>>Visit <%= @town.name %> </a>
+<% end %>
+
+
+
+
+<%= link_to "Go back", root_path  %>
