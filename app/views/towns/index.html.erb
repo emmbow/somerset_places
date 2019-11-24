@@ -1,6 +1,3 @@
-<%= link_to town_path(@town) do %>
-  <h1>Pick a town</h1>
-<% end %>
-
-
-
+<div class="container button-container">
+  <%= link_to "Reveal Town of the Day", town_path(@town), class: "btn btn-flat" %>
+</div>

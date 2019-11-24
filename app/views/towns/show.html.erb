@@ -1,16 +1,23 @@
-<h1><%= @town.name %></h1>
-
-<% if @town_detail[2].join == "" %>
-  <p>No wikipedia results for this town.</p>
-  <a href=<%= @town_detail[3].join %>>Try this instead</a>
-<% elsif @town_detail[2].join.include? ("may refer to:") %>
-  <p>No wikipedia page for this town.</p>
-<% else %>
-  <h1><%= @town_detail[2].join %></h1>
-  <a href=<%= @town_detail[3].join %>>Visit <%= @town.name %> </a>
-<% end %>
 
 
+<div class="show-container">
 
-
-<%= link_to "Go back", root_path  %>
+<%= link_to "<", root_path, class: "btn-ghost"  %>
+  <div class="container">
+    <div class="card-product">
+      <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+      <div class="card-product-infos">
+        <h1><%= @town.name %></h1>
+        <% if @town_detail[2].join == "" %>
+          <p>No wikipedia results for this town.</p>
+          <a href=<%= @town_detail[3].join %>>Try this instead</a>
+        <% elsif @town_detail[2].join.include? ("may refer to:") %>
+          <p>No wikipedia page for this town.</p>
+        <% else %>
+          <p><%= @town_detail[2].join %></p>
+          <a href=<%= @town_detail[3].join %> target= "_blank">Visit <%= @town.name %> </a>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
