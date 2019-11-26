@@ -1,5 +1,3 @@
-
-
 <div class="show-container">
 
   <%= link_to "<", root_path, class: "btn-ghost"  %>
@@ -15,7 +13,7 @@
             <p>No wikipedia page for this town.</p>
           <% else %>
             <p><%= @town_detail[2].join %></p>
-            <a href=<%= @town_detail[3].join %> target= "_blank">Visit <%= @town.name %> </a>
+            <a href=<%= @town_detail[3].join %> target="_blank">Visit <%= @town.name %> </a>
           <% end %>
         </div>
       </div>
