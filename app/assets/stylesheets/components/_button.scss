@@ -1,9 +1,9 @@
 .btn-ghost {
-  margin-top: 10px;
   color: #4A4A4A;
   border: 1px solid #4A4A4A;
   padding: 8px 24px;
   width: 15px;
+  height: 15px;
   border-radius: 50px;
   margin-left: 10px;
   font-weight: lighter;
@@ -26,6 +26,7 @@
   font-size: 35px;
   font-weight: lighter;
   text-decoration: none;
+  width: 400px;
 }
 
 .btn-flat:hover {
